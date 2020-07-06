@@ -33,14 +33,13 @@
 		80850CD8249358B800A3F2CF /* JavaScriptBridgeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80850CD7249358B800A3F2CF /* JavaScriptBridgeDelegate.swift */; };
 		8085FCF5247F614C00A3F2CF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8085FCF4247F614C00A3F2CF /* User.swift */; };
 		80A98AE624AA015F006780CA /* CryptoSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A98AE524AA015F006780CA /* CryptoSwift.swift */; };
-		80A98AE824AA0832006780CA /* realjs.js in Resources */ = {isa = PBXBuildFile; fileRef = 80A98AE724AA0832006780CA /* realjs.js */; };
 		80DE53F02498C538009C83DE /* QRScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE53EF2498C538009C83DE /* QRScanViewController.swift */; };
 		80DE5542249B0AA5009C83DE /* JavaScriptProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE5541249B0AA5009C83DE /* JavaScriptProtocol.swift */; };
 		80DE5544249B0BC4009C83DE /* JavaScriptMessageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE5543249B0BC4009C83DE /* JavaScriptMessageAdapter.swift */; };
+		80F01FA324B2BEA8002B2DF1 /* InjectJavaScriptFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F01FA224B2BEA8002B2DF1 /* InjectJavaScriptFile.swift */; };
 		80F1D7B524A8600900779176 /* Foundation + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1D7B424A8600900779176 /* Foundation + Extension.swift */; };
 		80F1D7B724A87C4900779176 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1D7B624A87C4900779176 /* WebDemoViewController.swift */; };
 		80F1D7B924A87C5B00779176 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 80F1D7B824A87C5B00779176 /* demo.html */; };
-		80F1D7BB24A8856500779176 /* injectJavascriptFile.js in Resources */ = {isa = PBXBuildFile; fileRef = 80F1D7BA24A8856500779176 /* injectJavascriptFile.js */; };
 		F49F9998BCF0C32ABCBE3D6F /* Pods_Manager_ManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716CDB8C36DB16C89BF2E126 /* Pods_Manager_ManagerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,14 +96,13 @@
 		80850CD7249358B800A3F2CF /* JavaScriptBridgeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptBridgeDelegate.swift; sourceTree = "<group>"; };
 		8085FCF4247F614C00A3F2CF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		80A98AE524AA015F006780CA /* CryptoSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSwift.swift; sourceTree = "<group>"; };
-		80A98AE724AA0832006780CA /* realjs.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = realjs.js; sourceTree = "<group>"; };
 		80DE53EF2498C538009C83DE /* QRScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanViewController.swift; sourceTree = "<group>"; };
 		80DE5541249B0AA5009C83DE /* JavaScriptProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptProtocol.swift; sourceTree = "<group>"; };
 		80DE5543249B0BC4009C83DE /* JavaScriptMessageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptMessageAdapter.swift; sourceTree = "<group>"; };
+		80F01FA224B2BEA8002B2DF1 /* InjectJavaScriptFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectJavaScriptFile.swift; sourceTree = "<group>"; };
 		80F1D7B424A8600900779176 /* Foundation + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation + Extension.swift"; sourceTree = "<group>"; };
 		80F1D7B624A87C4900779176 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		80F1D7B824A87C5B00779176 /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
-		80F1D7BA24A8856500779176 /* injectJavascriptFile.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = injectJavascriptFile.js; sourceTree = "<group>"; };
 		88C8A5619DFC1BE89664394A /* Pods-ManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-ManagerTests/Pods-ManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		899F390E8520DDB1182F17AC /* Pods-Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manager.release.xcconfig"; path = "Target Support Files/Pods-Manager/Pods-Manager.release.xcconfig"; sourceTree = "<group>"; };
 		A65C0BF92915586BB16ABBF2 /* Pods-Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manager.debug.xcconfig"; path = "Target Support Files/Pods-Manager/Pods-Manager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -280,8 +278,7 @@
 				80850CD7249358B800A3F2CF /* JavaScriptBridgeDelegate.swift */,
 				80DE5541249B0AA5009C83DE /* JavaScriptProtocol.swift */,
 				80DE5543249B0BC4009C83DE /* JavaScriptMessageAdapter.swift */,
-				80F1D7BA24A8856500779176 /* injectJavascriptFile.js */,
-				80A98AE724AA0832006780CA /* realjs.js */,
+				80F01FA224B2BEA8002B2DF1 /* InjectJavaScriptFile.swift */,
 			);
 			path = JavaScriptBridge;
 			sourceTree = "<group>";
@@ -408,9 +405,7 @@
 				8078875E2477D9DD00EB3287 /* LaunchScreen.storyboard in Resources */,
 				80F1D7B924A87C5B00779176 /* demo.html in Resources */,
 				8078875B2477D9DD00EB3287 /* Assets.xcassets in Resources */,
-				80F1D7BB24A8856500779176 /* injectJavascriptFile.js in Resources */,
 				807887592477D9DC00EB3287 /* Main.storyboard in Resources */,
-				80A98AE824AA0832006780CA /* realjs.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +554,7 @@
 				8085FCF5247F614C00A3F2CF /* User.swift in Sources */,
 				8085069F248B3E1000A3F2CF /* PrimitiveSequence + Extension.swift in Sources */,
 				80850CD8249358B800A3F2CF /* JavaScriptBridgeDelegate.swift in Sources */,
+				80F01FA324B2BEA8002B2DF1 /* InjectJavaScriptFile.swift in Sources */,
 				80F1D7B524A8600900779176 /* Foundation + Extension.swift in Sources */,
 				80788782247A5EC400EB3287 /* MenuViewController.swift in Sources */,
 				808509812490BD5E00A3F2CF /* WebViewController.swift in Sources */,

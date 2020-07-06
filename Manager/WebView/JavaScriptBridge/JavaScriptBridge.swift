@@ -32,12 +32,14 @@ class JavaScriptBridge: NSObject, WKScriptMessageHandler {
             wkWebView?.configuration.userContentController.addUserScript(userScript)
             return
         }
-        if let path = Bundle.main.path(forResource: "injectJavascriptFile", ofType: "js"),let source = try? String(data: Data(contentsOf: URL(fileURLWithPath: path)), encoding: .utf8) {
-            let s = aesDecode(source)
-            let userScript = WKUserScript(source: s, injectionTime: WKUserScriptInjectionTime.atDocumentStart, forMainFrameOnly: false)
-            Self._userScript = userScript
-            wkWebView?.configuration.userContentController.addUserScript(userScript)
-        }
+        
+        var jsStr = injectJavaScript.trimmingCharacters(in: .whitespaces)
+        jsStr = jsStr.trimmingCharacters(in: .whitespacesAndNewlines)
+        jsStr = jsStr.trimmingCharacters(in: .newlines)
+        
+        let userScript = WKUserScript(source: jsStr, injectionTime: WKUserScriptInjectionTime.atDocumentStart, forMainFrameOnly: false)
+        Self._userScript = userScript
+        wkWebView?.configuration.userContentController.addUserScript(userScript)
     }
     
     func addScriptMessageHandler()  {
@@ -83,6 +85,11 @@ class JavaScriptBridge: NSObject, WKScriptMessageHandler {
         } catch  {
             
         }
+        
+        messageJson = messageJson.trimmingCharacters(in: .whitespaces)
+        messageJson = messageJson.trimmingCharacters(in: .newlines)
+        messageJson = messageJson.trimmingCharacters(in: .whitespacesAndNewlines)
+        
         let command = "jsbridge._handleMessageFromObjC(\(messageJson));"
         if Thread.current.isMainThread {
             wkWebView?.evaluateJavaScript(command, completionHandler: nil)
