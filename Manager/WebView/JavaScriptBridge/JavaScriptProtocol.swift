@@ -56,12 +56,12 @@ class TestObject: NSObject, JavaScriptProtocol {
 
     weak var bridge: JavaScriptBridge?
     @objc func test(_ msg: JavaScriptMessageAdapter) {
-        print(msg.callId)
+        logger(msg.callId)
         self.success(msg.callId,["ok":222])
     }
     
     @objc func testFail(_ msg: JavaScriptMessageAdapter) {
-        print(msg.callId)
+        logger(msg.callId)
         self.fail(msg.callId, "fail")
     }
     

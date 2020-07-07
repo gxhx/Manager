@@ -16,7 +16,7 @@ class MenuHeaderView: UIView {
         imageView.layer.cornerRadius = 50
         imageView.layer.masksToBounds = true
         imageView.backgroundColor = UIColor(hex: "0x171717")
-        imageView.image = UIImage(named: "userphoto")
+        imageView.image = R.image.userphoto()
         return imageView
     }()
     

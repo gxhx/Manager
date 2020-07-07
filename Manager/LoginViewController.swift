@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     fileprivate let disposeBag = DisposeBag()
     
     lazy var backImageView : UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "loginBack"))
+        let imageView = UIImageView(image: R.image.loginBack())
         imageView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         return imageView
     }()
@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         textField.layer.cornerRadius = 8
         textField.placeholder = "手机号/会员卡号"
         textField.keyboardType = .numberPad
-        let imageView = UIImageView(image: UIImage(named: "loginPhone"))
+        let imageView = UIImageView(image: R.image.loginPhone())
         textField.leftView = imageView
         textField.leftViewMode = .always
         textField.returnKeyType = .next
@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
         textField.placeholder = "密码"
         textField.returnKeyType = .done
         textField.delegate = self
-        let imageView = UIImageView(image: UIImage(named: "loginPassword"))
+        let imageView = UIImageView(image: R.image.loginPassword())
         textField.leftView = imageView
         textField.leftViewMode = .always
         textField.isSecureTextEntry = true

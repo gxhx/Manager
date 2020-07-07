@@ -37,6 +37,9 @@
 		80DE5542249B0AA5009C83DE /* JavaScriptProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE5541249B0AA5009C83DE /* JavaScriptProtocol.swift */; };
 		80DE5544249B0BC4009C83DE /* JavaScriptMessageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DE5543249B0BC4009C83DE /* JavaScriptMessageAdapter.swift */; };
 		80F01FA324B2BEA8002B2DF1 /* InjectJavaScriptFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F01FA224B2BEA8002B2DF1 /* InjectJavaScriptFile.swift */; };
+		80F023A124B44CC4002B2DF1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F023A024B44CC4002B2DF1 /* Logger.swift */; };
+		80F023AB24B4604E002B2DF1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F023AA24B4604E002B2DF1 /* R.generated.swift */; };
+		80F023AD24B464FD002B2DF1 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F023AC24B464FD002B2DF1 /* Async.swift */; };
 		80F1D7B524A8600900779176 /* Foundation + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1D7B424A8600900779176 /* Foundation + Extension.swift */; };
 		80F1D7B724A87C4900779176 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1D7B624A87C4900779176 /* WebDemoViewController.swift */; };
 		80F1D7B924A87C5B00779176 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 80F1D7B824A87C5B00779176 /* demo.html */; };
@@ -100,6 +103,9 @@
 		80DE5541249B0AA5009C83DE /* JavaScriptProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptProtocol.swift; sourceTree = "<group>"; };
 		80DE5543249B0BC4009C83DE /* JavaScriptMessageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptMessageAdapter.swift; sourceTree = "<group>"; };
 		80F01FA224B2BEA8002B2DF1 /* InjectJavaScriptFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectJavaScriptFile.swift; sourceTree = "<group>"; };
+		80F023A024B44CC4002B2DF1 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		80F023AA24B4604E002B2DF1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		80F023AC24B464FD002B2DF1 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		80F1D7B424A8600900779176 /* Foundation + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation + Extension.swift"; sourceTree = "<group>"; };
 		80F1D7B624A87C4900779176 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		80F1D7B824A87C5B00779176 /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
@@ -248,6 +254,9 @@
 				808508AF248E3C6B00A3F2CF /* CacheManage.swift */,
 				80DE53EF2498C538009C83DE /* QRScanViewController.swift */,
 				80A98AE524AA015F006780CA /* CryptoSwift.swift */,
+				80F023A024B44CC4002B2DF1 /* Logger.swift */,
+				80F023AA24B4604E002B2DF1 /* R.generated.swift */,
+				80F023AC24B464FD002B2DF1 /* Async.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -301,6 +310,7 @@
 			buildConfigurationList = 807887782477D9DD00EB3287 /* Build configuration list for PBXNativeTarget "Manager" */;
 			buildPhases = (
 				3D16343C206A98B1B840BE54 /* [CP] Check Pods Manifest.lock */,
+				80F023A224B45D78002B2DF1 /* R.swift Script */,
 				8078874A2477D9DC00EB3287 /* Sources */,
 				8078874B2477D9DC00EB3287 /* Frameworks */,
 				8078874C2477D9DC00EB3287 /* Resources */,
@@ -509,6 +519,27 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		80F023A224B45D78002B2DF1 /* R.swift Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"",
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "R.swift Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		DEBA83FF6CBD9B6D578D2A1D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -533,6 +564,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80F023AB24B4604E002B2DF1 /* R.generated.swift in Sources */,
 				808508B0248E3C6B00A3F2CF /* CacheManage.swift in Sources */,
 				8085069D248A590A00A3F2CF /* UIColor + Extension.swift in Sources */,
 				807887562477D9DC00EB3287 /* ViewController.swift in Sources */,
@@ -540,6 +572,7 @@
 				8085097F2490BADC00A3F2CF /* WebView.swift in Sources */,
 				8085053F248A2D0700A3F2CF /* LoginService.swift in Sources */,
 				80850C2C2493289300A3F2CF /* JavaScriptBridge.swift in Sources */,
+				80F023A124B44CC4002B2DF1 /* Logger.swift in Sources */,
 				8085096D248FA7EC00A3F2CF /* UIView + Extension.swift in Sources */,
 				807887522477D9DC00EB3287 /* AppDelegate.swift in Sources */,
 				80850542248A357900A3F2CF /* NetworkConstants.swift in Sources */,
@@ -551,6 +584,7 @@
 				80DE5544249B0BC4009C83DE /* JavaScriptMessageAdapter.swift in Sources */,
 				80DE5542249B0AA5009C83DE /* JavaScriptProtocol.swift in Sources */,
 				807887542477D9DC00EB3287 /* SceneDelegate.swift in Sources */,
+				80F023AD24B464FD002B2DF1 /* Async.swift in Sources */,
 				8085FCF5247F614C00A3F2CF /* User.swift in Sources */,
 				8085069F248B3E1000A3F2CF /* PrimitiveSequence + Extension.swift in Sources */,
 				80850CD8249358B800A3F2CF /* JavaScriptBridgeDelegate.swift in Sources */,
