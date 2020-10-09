@@ -28,6 +28,7 @@ PODS:
   - SwiftLint (0.39.2)
   - SwiftyJSON (5.0.0)
   - Toast-Swift (5.0.1)
+  - URLNavigator (2.3.0)
 
 DEPENDENCIES:
   - CryptoSwift
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - SwiftLint
   - SwiftyJSON
   - Toast-Swift
+  - URLNavigator
 
 SPEC REPOS:
   trunk:
@@ -63,6 +65,7 @@ SPEC REPOS:
     - SwiftLint
     - SwiftyJSON
     - Toast-Swift
+    - URLNavigator
 
 SPEC CHECKSUMS:
   Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
@@ -82,7 +85,8 @@ SPEC CHECKSUMS:
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
 
-PODFILE CHECKSUM: 1304234d0b6a071d09d8e51d4612a7d9dc99c92e
+PODFILE CHECKSUM: 976e5a1c1af1734da06c12753abb932dadb613f6
 
 COCOAPODS: 1.9.1

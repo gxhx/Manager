@@ -13,9 +13,8 @@ public struct CacheManager {
     static let share = CacheManager()
     private let fileManager = FileManager()
     private let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! + "/ManagerCache/"
-    
+    /// 读写队列 使用.barrier   多读单写
     private let queue = DispatchQueue(label: "com.Sharlockk.disk-cache",attributes: .concurrent)
-    private let lock = DispatchSemaphore(value: 1)
 
     private init() {
         var isDirectory : ObjCBool = false
@@ -35,10 +34,6 @@ public struct CacheManager {
       
         guard fileManager.fileExists(atPath: filePath) else{
             return nil
-        }
-        lock.wait()
-        defer {
-            lock.signal()
         }
         var t : T? = nil
         if let data = fileManager.contents(atPath: filePath) {
@@ -82,10 +77,6 @@ public struct CacheManager {
             return
         }
         
-        lock.wait()
-        defer {
-            lock.signal()
-        }
         if #available(iOS 11.0, *) {
             
             let data = try? NSKeyedArchiver.archivedData(withRootObject: object!, requiringSecureCoding: true)
@@ -105,8 +96,7 @@ public struct CacheManager {
     ///   - object: The object to be stored in the cache. If nil, it calls `removeObjectForKey:`.
     ///   - completion: A block which will be invoked in background queue when finished.
     public func save(withKey key: String,_ object: Any?,_ completion:@escaping ()->()) {
-        
-        queue.async {
+        queue.async(group: nil, qos: .default, flags: .barrier) {
             self.save(withKey: key, object)
             completion()
         }
@@ -120,15 +110,15 @@ public struct CacheManager {
         guard fileManager.fileExists(atPath: path) else {
             return
         }
-        lock.wait()
-        try? fileManager.removeItem(atPath: path)
-        lock.signal()
+        queue.async(group: nil, qos: .default, flags: .barrier) {
+            try? self.fileManager.removeItem(atPath: path)
+        }
     }
     
     public func removeAll() {
-        lock.wait()
-        try? fileManager.removeItem(atPath: docPath)
-        try? fileManager.createDirectory(at: URL(fileURLWithPath: docPath, isDirectory: true), withIntermediateDirectories: true, attributes: nil)
-        lock.signal()
+        queue.async(group: nil, qos: .default, flags: .barrier) {
+            try? self.fileManager.removeItem(atPath: self.docPath)
+            try? self.fileManager.createDirectory(at: URL(fileURLWithPath: self.docPath, isDirectory: true), withIntermediateDirectories: true, attributes: nil)
+        }
     }
 }

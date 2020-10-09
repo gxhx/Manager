@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2FA06DFA13255B9F28C39D1C /* Pods_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 258137941555E863A0808568 /* Pods_Manager.framework */; };
 		399A64297A43AAE166258F2E /* Pods_ManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB12651D72DADBDBE3A20EDB /* Pods_ManagerTests.framework */; };
+		8021994924DD442F00DFF946 /* UIImage + Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8021994824DD442F00DFF946 /* UIImage + Filter.swift */; };
 		807887522477D9DC00EB3287 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807887512477D9DC00EB3287 /* AppDelegate.swift */; };
 		807887542477D9DC00EB3287 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807887532477D9DC00EB3287 /* SceneDelegate.swift */; };
 		807887562477D9DC00EB3287 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807887552477D9DC00EB3287 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		80F023A124B44CC4002B2DF1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F023A024B44CC4002B2DF1 /* Logger.swift */; };
 		80F023AB24B4604E002B2DF1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F023AA24B4604E002B2DF1 /* R.generated.swift */; };
 		80F023AD24B464FD002B2DF1 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F023AC24B464FD002B2DF1 /* Async.swift */; };
+		80F023AF24B496F2002B2DF1 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F023AE24B496F2002B2DF1 /* Util.swift */; };
 		80F1D7B524A8600900779176 /* Foundation + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1D7B424A8600900779176 /* Foundation + Extension.swift */; };
 		80F1D7B724A87C4900779176 /* WebDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F1D7B624A87C4900779176 /* WebDemoViewController.swift */; };
 		80F1D7B924A87C5B00779176 /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 80F1D7B824A87C5B00779176 /* demo.html */; };
@@ -69,6 +71,7 @@
 		25C30BE4B27EAC21044B175F /* Pods-Manager-ManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manager-ManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Manager-ManagerUITests/Pods-Manager-ManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		608EF6B367171986F8EFFCEF /* Pods-Manager-ManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Manager-ManagerUITests.release.xcconfig"; path = "Target Support Files/Pods-Manager-ManagerUITests/Pods-Manager-ManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		716CDB8C36DB16C89BF2E126 /* Pods_Manager_ManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Manager_ManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8021994824DD442F00DFF946 /* UIImage + Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Filter.swift"; sourceTree = "<group>"; };
 		8078874E2477D9DC00EB3287 /* Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807887512477D9DC00EB3287 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		807887532477D9DC00EB3287 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 		80F023A024B44CC4002B2DF1 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		80F023AA24B4604E002B2DF1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		80F023AC24B464FD002B2DF1 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		80F023AE24B496F2002B2DF1 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		80F1D7B424A8600900779176 /* Foundation + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation + Extension.swift"; sourceTree = "<group>"; };
 		80F1D7B624A87C4900779176 /* WebDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDemoViewController.swift; sourceTree = "<group>"; };
 		80F1D7B824A87C5B00779176 /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 				8085069C248A590A00A3F2CF /* UIColor + Extension.swift */,
 				8085069E248B3E1000A3F2CF /* PrimitiveSequence + Extension.swift */,
 				80F1D7B424A8600900779176 /* Foundation + Extension.swift */,
+				8021994824DD442F00DFF946 /* UIImage + Filter.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 				80F023A024B44CC4002B2DF1 /* Logger.swift */,
 				80F023AA24B4604E002B2DF1 /* R.generated.swift */,
 				80F023AC24B464FD002B2DF1 /* Async.swift */,
+				80F023AE24B496F2002B2DF1 /* Util.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -570,12 +576,14 @@
 				807887562477D9DC00EB3287 /* ViewController.swift in Sources */,
 				80DE53F02498C538009C83DE /* QRScanViewController.swift in Sources */,
 				8085097F2490BADC00A3F2CF /* WebView.swift in Sources */,
+				80F023AF24B496F2002B2DF1 /* Util.swift in Sources */,
 				8085053F248A2D0700A3F2CF /* LoginService.swift in Sources */,
 				80850C2C2493289300A3F2CF /* JavaScriptBridge.swift in Sources */,
 				80F023A124B44CC4002B2DF1 /* Logger.swift in Sources */,
 				8085096D248FA7EC00A3F2CF /* UIView + Extension.swift in Sources */,
 				807887522477D9DC00EB3287 /* AppDelegate.swift in Sources */,
 				80850542248A357900A3F2CF /* NetworkConstants.swift in Sources */,
+				8021994924DD442F00DFF946 /* UIImage + Filter.swift in Sources */,
 				80A98AE624AA015F006780CA /* CryptoSwift.swift in Sources */,
 				8085074C248B81AB00A3F2CF /* LeftViewPadingTextField.swift in Sources */,
 				8085096B248F93A400A3F2CF /* MenuHeaderView.swift in Sources */,

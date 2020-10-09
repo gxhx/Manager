@@ -15,14 +15,14 @@ target 'Manager' do
   pod 'IQKeyboardManagerSwift'  # 键盘控制
   pod 'SwiftyJSON' # 处理JSON
   pod 'ObjectMapper'  #model与json互转
-  pod 'RxCocoa'
-  pod 'GYSide'
+  pod 'RxCocoa'   #Rx  RxSwift 由Moya依赖
+  pod 'GYSide'    # 侧滑栏
 #  pod 'EFNavigationBar'
-  pod 'Toast-Swift'
+  pod 'Toast-Swift' #Toast
   pod 'NVActivityIndicatorView'
 #  pod 'KeychainAccess' #钥匙串存储
-  
-  pod 'CryptoSwift'
+  pod 'URLNavigator'  #路由
+  pod 'CryptoSwift' #加密组件
 
   target 'ManagerTests' do
     inherit! :search_paths
